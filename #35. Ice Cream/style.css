@@ -1,0 +1,42 @@
+:root {
+        --iceCream: #FFF1C1;
+        --stick: #FE5F55;
+        --shadow: #A64942;
+        --bg: #293462;
+}
+
+* { padding: 0; margin: 0; box-sizing: border-box;}
+body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg);
+        display: grid;
+        place-content: center;
+}
+
+.ice__cream {
+        position: relative;
+        width: 6.2em;
+        height: 9.4em;
+        background-color: var(--iceCream);
+        border-radius: 6em 6em 2.8em 2.8em;
+}
+
+.ice__cream::before,
+.ice__cream::after {
+        position: absolute;
+        content: "";
+        width: 1.85em;
+        top: 100%;
+        left: 35%;
+}
+.ice__cream::before {
+        height: 3.1em;
+        background-color: var(--stick);
+        border-bottom-left-radius: .6em;
+        border-bottom-right-radius: .6em;
+}
+.ice__cream::after {
+        height: .6em;
+        background-color: var(--shadow);
+}
