@@ -1,5 +1,4 @@
-git # Mountains
-
+# Mountains
 ## Output
 ![Mountains output](images/output.png)
 
