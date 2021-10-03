@@ -1,0 +1,57 @@
+:root {
+        --bg: hsl(46, 49%, 40%);
+        --piano: hsl(0, 0%, 10%);
+        --keys: hsl(0, 0%, 100%);
+}
+* { padding: 0; margin: 0; box-sizing: border-box;}
+
+body {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg);
+        display: grid;
+        place-content: center;
+}
+
+.piano {
+        position: relative;
+        width: 180px;
+        height: 100px;
+        background-color: var(--piano);
+        border-radius: .5em;
+}
+
+.piano::before,
+.piano::after {
+        position: absolute;
+        content: "";
+}
+
+.piano::before {
+        width: 20px;
+        height: 70px;
+        bottom: .3em;
+        left: .3em;
+        background-color: var(--keys);
+        border-radius: .25em;
+        box-shadow: 
+                25px 0 0 0 var(--keys),
+                50px 0 0 0 var(--keys),
+                75px 0 0 0 var(--keys),
+                100px 0 0 0 var(--keys),
+                125px 0 0 0 var(--keys),
+                150px 0 0 0 var(--keys);
+}
+
+.piano::after {
+        width: 15px;
+        height: 35px;
+        background-color: var(--piano);
+        top: 1.5em;
+        left: 1.25em;
+        box-shadow:
+        25px 0 0 0 var(--piano),
+        75px 0 0 0 var(--piano),
+        100px 0 0 0 var(--piano),
+        125px 0 0 0 var(--piano);
+}
