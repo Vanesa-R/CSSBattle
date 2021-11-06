@@ -1,0 +1,43 @@
+* {margin:0; padding:0;box-sizing: border-box;} /* Se recomienda utilizar normalize.css*/
+
+:root {
+    --bg: #1E3163;
+    --circle:#FFF1C0;
+    --mounstains: #FF5F54; 
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: #1E3163;
+    display: grid;
+    place-content: center;
+}
+
+.mountains {
+    background-color: #FFF1C0;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.mountains::after, .mountains::before {
+    position: absolute;
+    content: "";
+    background-color: var(--mounstains);
+    transform: rotate(45deg);
+}
+.mountains::after {
+    width: 150px;
+    height: 150px;
+    bottom: -40px;
+    right: -16px;
+}
+
+.mountains::before{
+    width: 80px;
+    height: 80px;
+    left: -10px;
+    bottom: -26px;
+}
