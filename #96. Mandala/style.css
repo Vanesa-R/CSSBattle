@@ -1,0 +1,44 @@
+* {padding:0; margin: 0; box-sizing: border-box;}
+
+:root {
+        --bgColor: #243D83;
+        --circle: #6592CF;
+}
+
+body {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+        background-color: var(--bgColor);
+}
+
+.mandala {
+        position:relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: var(--circle);
+}
+
+.mandala::before,
+.mandala::after{
+        position: absolute;
+        content: "";
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 20px solid var(--bgColor);
+}
+
+.mandala::before {
+        top: 15px;
+        left: -60px;
+        -webkit-box-reflect: right -20px;
+}
+
+.mandala::after {
+        top: -60px;
+        left: 15px;
+        -webkit-box-reflect: below -20px;
+}
