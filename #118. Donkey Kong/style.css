@@ -1,0 +1,53 @@
+* { box-sizing: border-box; padding: 0; margin: 0;}
+
+:root {
+    --pink: #AF067C;
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--black);
+}
+
+.staircases {
+    position: relative;
+    width: 300px;
+    height: 20px;
+    box-shadow:  0 50px 0 0 var(--pink),
+                0 -50px 0 0 var(--pink);
+}
+
+.staircases,
+.staircases::before {
+    border-radius: 1em;
+}
+
+.staircases::before,
+.staircases::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+}
+
+.staircases::before {
+    width: 100%;
+    background-color: var(--pink);
+    transform: rotate(-4deg);
+}
+
+.staircases::after {
+    top: -25px;
+    right: 15px;
+    z-index: -10;
+    width: 50px;
+    background-color: var(--white);
+    box-shadow: 50px 0 0 0 var(--white),
+                50px 110px 0 0 var(--white),
+                0 220px 0 0 var(--white);
+    transform: rotate(90deg);
+}
